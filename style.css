@@ -1,0 +1,235 @@
+:root {
+    --white: #ffffff;
+    --green: #54e6af;
+    --lightGreen: #b3ffe2;
+    --bgColor: #121725;
+    --lightBlue: #2c344b;
+    --gray: #5a668a;
+    --lightGray: #c2cbe5;
+
+    --width: 327px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(18, 17, 27);
+    background-image: url('./assets/mobile/image-host.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: soft-light;
+    font-family: 'Chivo', sans-serif;
+    font-weight: 300;
+    text-align: center;
+    overflow: hidden;
+}
+
+.containerSite {
+    max-width: var(--width);
+    margin: auto;
+}
+
+.text-white {
+    color: var(--white);
+}
+
+.logo {
+    margin: 62px 0 57px;
+}
+
+h1 {
+    color: var(--green);
+    font-size: 26px;
+    line-height: 36px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    font-weight: 300;
+}
+
+p {
+    color: var(--lightGray);
+    font-size: 15px;
+    line-height: 25px;
+    margin-bottom: 33px;
+}
+
+.compagniesLogos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 48px;
+}
+
+.compagniesLogos img {
+    width: 18%;
+    height: 100%;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    border: none;
+    height: 48px;
+    border-radius: 28px;
+    padding-left: 32px;
+    background: var(--lightBlue);
+    color: var(--white);
+    font-size: 14px;
+    line-height: 28px;
+}
+
+input::placeholder {
+    font-size: 14px;
+    line-height: 28px;
+    color: var(--white);
+    opacity: 0.5;
+    font-weight: 700;
+}
+
+input:focus {
+    outline: none;
+}
+
+.emailError {
+    visibility: hidden;
+    color: #fb3e3e;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: left;
+    margin: 8px 0 8px 32px;
+}
+
+button {
+    border: none;
+    height: 48px;
+    border-radius: 28px;
+    background-color: var(--green);
+    color: var(--bgColor);
+    font-size: 14px;
+    line-height: 28px;
+    font-weight: 700;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: var(--lightGreen);
+}
+
+button:focus {
+    outline: none;
+}
+
+@media screen and (min-width: 760px) {
+    :root {
+        --width: 635px;
+    }
+
+    body {
+        background-color: var(--bgColor);
+        background-image: url('./assets/tablet/image-host.jpg');
+        background-repeat: no-repeat;
+        background-size: inherit;
+        background-blend-mode: inherit;
+        background-position: top right;
+        text-align: left;
+    }
+
+    body::after {
+        position: absolute;
+        bottom: 0;
+        left: 30px;
+        content: '';
+        background-image: url('/assets/desktop/bg-pattern-dots.svg');
+        background-repeat: no-repeat;
+        width: 232px;
+        height: 104px;
+    }
+
+    .containerSite {
+        margin: 0;
+    }
+
+    .logo {
+        margin: 50px 0 152px 39px;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--bgColor);
+        width: 635px;
+        margin-left: 39px;
+        padding-top: 93px;
+    }
+
+    h1 {
+        font-size: 48px;
+        line-height: 56px;
+        margin-bottom: 31px;
+    }
+
+    p {
+        max-width: 445px;
+        font-size: 18px;
+        line-height: 28px;
+        margin-bottom: 40px;
+    }
+
+    .compagniesLogos {
+        order: 1;
+    }
+
+    #form {
+        position: relative;
+        flex-direction: row;
+        align-items: center;
+        width: 427px;
+        height: 56px;
+        background-color: var(--lightBlue);
+        padding: 0;
+        margin-bottom: 64px;
+        border-radius: 28px;
+    }
+
+    input {
+        height: 100%;
+        width: 305px;
+        background-color: transparent;
+    }
+
+    .emailError {
+        position: absolute;
+        top: 64px;
+        left: 32px;
+        margin: 0;
+    }
+
+    button {
+        position: absolute;
+        right: 5px;
+        width: 162px;
+    }
+
+    .compagniesLogos {
+        width: 536px;
+        height: 29px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0;
+        gap: 40px;
+    }
+
+    .compagniesLogos img {
+        width: 100%;
+        height: 100%;
+    }
+}

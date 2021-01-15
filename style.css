@@ -235,7 +235,7 @@ button:focus {
     }
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1200px) {
     :root {
         --width: 723px;
         --paddingLeft: 165px;

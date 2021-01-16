@@ -17,17 +17,17 @@
 }
 
 body {
-    width: 100vw;
-    height: 100vh;
-    background-color: rgb(18, 17, 27);
-    background-image: url('./assets/mobile/image-host.jpg');
+    /* background-color: rgb(18, 17, 27); */
+    /* background-image: url('./assets/mobile/image-host.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-blend-mode: soft-light;
+    background-blend-mode: soft-light; */
+    background: linear-gradient(rgba(18, 23, 37, 0.9), rgba(18, 23, 37, 0.9)),
+        url(./assets/mobile/image-host.jpg);
+
     font-family: 'Chivo', sans-serif;
     font-weight: 300;
     text-align: center;
-    overflow: hidden;
 }
 
 .containerSite {
@@ -146,7 +146,7 @@ button:focus {
 
     body::after {
         position: absolute;
-        bottom: 0;
+        top: 920px;
         left: 30px;
         content: '';
         background-image: url('/assets/desktop/bg-pattern-dots.svg');
@@ -247,7 +247,6 @@ button:focus {
     }
 
     body::after {
-        bottom: inherit;
         left: inherit;
         right: 0;
         top: 718px;
